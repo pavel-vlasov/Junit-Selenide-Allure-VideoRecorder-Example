@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="auth.Search_Test" time="37.025" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_77\jre\bin"/>
+    <property name="java.vm.version" value="25.77-b03"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\vlas2\Documents\Junit-Selenide-Allure-VideoRecorder-Example"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\vlas2\Documents\Junit-Selenide-Allure-VideoRecorder-Example"/>
+    <property name="java.runtime.version" value="1.8.0_77-b03"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_77\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\vlas2\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.3.9\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.8.0_77\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\apache-maven-3.3.9\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\PuTTY\;C:\Users\SYSTEM\AppData\Local\Google\Chrome\Application\chrome.exe;D:\Program Files\nodejs\;%android-sdk%\platform-tools\;c:\ffmpeg\bin;C:\Users\vlas2\AppData\Local\Apps\cURL\bin;C:\Users\vlas2\AppData\Local\Microsoft\WindowsApps;C:\Users\vlas2\AppData\Roaming\npm;C:\Program Files\Docker Toolbox;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\vlas2"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="user.name" value="vlas2"/>
+    <property name="java.class.path" value="C:\Program Files\apache-maven-3.3.9\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_77\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="ru"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_77"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_77\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_77\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_77\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_77\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_77\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_77\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_77\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_77\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_77\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp866"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.3.9\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp866"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="open_page" classname="auth.Search_Test" time="36.845">
+    <failure message="Element should be value &apos;10&apos; {By.xpath: //input[@aria-label=&apos;Найти&apos;]}&#10;Element: &apos;&lt;input aria-autocomplete=&quot;both&quot; aria-haspopup=&quot;false&quot; aria-label=&quot;Найти&quot; autocomplete=&quot;off&quot; class=&quot;gsfi lst-d-f&quot; dir=&quot;ltr&quot; id=&quot;lst-ib&quot; maxlength=&quot;2048&quot; name=&quot;q&quot; role=&quot;combobox&quot; spellcheck=&quot;false&quot; title=&quot;Поиск&quot; type=&quot;text&quot;&gt;&lt;/input&gt;&apos;" type="com.codeborne.selenide.ex.ElementShould"><![CDATA[com.codeborne.selenide.ex.ElementShould: 
+Element should be value '10' {By.xpath: //input[@aria-label='Найти']}
+Element: '<input aria-autocomplete="both" aria-haspopup="false" aria-label="Найти" autocomplete="off" class="gsfi lst-d-f" dir="ltr" id="lst-ib" maxlength="2048" name="q" role="combobox" spellcheck="false" title="Поиск" type="text"></input>'
+	at auth.Search_Test.open_page(Search_Test.java:167)
+]]></failure>
+    <system-out><![CDATA[C:\Users\vlas2\Documents\Junit-Selenide-Allure-VideoRecorder-Example\video\open_page_recording_2017_03_02_17_01_52.avi
+C:\Users\vlas2\Documents\Junit-Selenide-Allure-VideoRecorder-Example\video\open_page_recording_2017_03_02_17_01_52.avi
+open_page_recording_2017_03_02_17_01_52.mp4
+]]></system-out>
+    <system-err><![CDATA[log4j:WARN No appenders could be found for logger (com.automation.remarks.video.recorder.monte.MonteRecorder).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+фев 03, 2017 5:01:27 PM com.codeborne.selenide.webdriver.WebDriverFactory createFirefoxDriver
+INFO: Firefox 48+ is currently not supported by Selenium Firefox driver. Use browser=marionette with geckodriver, when using it.
+фев 03, 2017 5:01:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+фев 03, 2017 5:01:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+фев 03, 2017 5:01:41 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: BrowserName=firefox Version=46.0.1 Platform=WINDOWS
+фев 03, 2017 5:01:41 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: Selenide v. 4.2.1
+фев 03, 2017 5:01:41 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: Selenium WebDriver v. 3.0.1 build time: 2016-10-18 09:49:13 -0700
+фев 03, 2017 5:01:41 PM com.codeborne.selenide.impl.WebDriverThreadLocalContainer createDriver
+INFO: Create webdriver in current thread 1: FirefoxDriver -> FirefoxDriver: firefox on WINDOWS (8fc58d26-3694-45dc-93e5-da91f1927386)
+фев 03, 2017 5:01:51 PM com.codeborne.selenide.impl.WebDriverThreadLocalContainer closeWebDriver
+INFO: Close webdriver: 1 -> FirefoxDriver: firefox on WINDOWS (8fc58d26-3694-45dc-93e5-da91f1927386)
+фев 03, 2017 5:01:51 PM com.codeborne.selenide.impl.WebDriverThreadLocalContainer closeWebDriver
+INFO: Close proxy server: 1 -> null
+фев 03, 2017 5:01:51 PM com.codeborne.selenide.impl.WebDriverThreadLocalContainer$CloseBrowser run
+INFO: Trying to close the browser FirefoxDriver ...
+фев 03, 2017 5:01:52 PM com.codeborne.selenide.impl.WebDriverThreadLocalContainer closeWebDriver
+INFO: Closed webdriver in 895 ms
+26871 [main] INFO net.bramp.ffmpeg.RunProcessFunction - C:/ffmpeg/bin/ffmpeg.exe -version
+26910 [main] INFO net.bramp.ffmpeg.RunProcessFunction - C:/ffmpeg/bin/ffprobe.exe -version
+26939 [main] INFO net.bramp.ffmpeg.RunProcessFunction - C:/ffmpeg/bin/ffprobe.exe -v quiet -print_format json -show_error -show_format -show_streams C:\Users\vlas2\Documents\Junit-Selenide-Allure-VideoRecorder-Example\video\open_page_recording_2017_03_02_17_01_52.avi
+26994 [main] INFO net.bramp.ffmpeg.RunProcessFunction - C:/ffmpeg/bin/ffmpeg.exe -y -v error -i C:\Users\vlas2\Documents\Junit-Selenide-Allure-VideoRecorder-Example\video\open_page_recording_2017_03_02_17_01_52.avi -strict experimental -f mp4 -vcodec libx264 -s 1920x1080 -r 24/1 -b:v 276887 -acodec aac -ac 1 -ar 48000 -b:a 32768 -sn C:\Users\vlas2\Documents\Junit-Selenide-Allure-VideoRecorder-Example\video\open_page_recording_2017_03_02_17_01_52.mp4
+]]></system-err>
+  </testcase>
+</testsuite>

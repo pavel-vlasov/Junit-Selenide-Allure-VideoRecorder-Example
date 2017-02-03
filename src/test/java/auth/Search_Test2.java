@@ -1,62 +1,46 @@
 package auth;
 
 import com.automation.remarks.junit.VideoRule;
+import com.automation.remarks.video.annotations.Video;
 import com.automation.remarks.video.enums.RecorderType;
 import com.automation.remarks.video.enums.RecordingMode;
 import com.automation.remarks.video.enums.VideoSaveMode;
 import com.automation.remarks.video.recorder.VideoRecorder;
-import com.codeborne.selenide.*;
-import com.codeborne.selenide.commands.ShouldBe;
-import com.codeborne.selenide.conditions.Text;
-import com.codeborne.selenide.junit.ScreenShooter;
-import com.codeborne.selenide.junit.SoftAsserts;
-import com.codeborne.selenide.testng.BrowserPerTest;
-
-
-import org.bouncycastle.util.test.SimpleTest;
-import org.junit.*;
+import com.codeborne.selenide.Screenshots;
+import com.codeborne.selenide.WebDriverRunner;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import org.openqa.selenium.By;
-import com.codeborne.selenide.Selenide.*;
-import com.codeborne.selenide.SelenideElement.*;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testcontainers.containers.BrowserWebDriverContainer;
+import ru.yandex.qatools.allure.annotations.Attachment;
+import ru.yandex.qatools.allure.annotations.Step;
+import ru.yandex.qatools.allure.annotations.Stories;
 
-import java.io.*;
-import java.net.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.concurrent.TimeUnit;
-import java.net.HttpURLConnection;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.concurrent.TimeUnit;
 
-import static com.codeborne.selenide.CollectionCondition.texts;
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Configuration.AssertionMode.SOFT;
-import static com.codeborne.selenide.Selectors.*;
+import static auth.Index.search;
+import static auth.Index.search_box;
+import static com.codeborne.selenide.Condition.value;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Configuration.*;
-import static com.codeborne.selenide.WebDriverRunner.*;
-
-import com.automation.remarks.video.annotations.Video;
-//import com.automation.remarks.video.junit.VideoRule;
-import static auth.Index.*;
-
-import org.junit.Test;
-import ru.yandex.qatools.allure.annotations.*;
-//import ru.yandex.qatools.allure.annotations.Attachment;
-
-import static junit.framework.Assert.assertTrue;
 import static org.awaitility.Awaitility.await;
+import static org.testcontainers.containers.BrowserWebDriverContainer.VncRecordingMode.RECORD_ALL;
 
+//import com.automation.remarks.video.junit.VideoRule;
+//import ru.yandex.qatools.allure.annotations.Attachment;
 
 
 /**
@@ -64,7 +48,7 @@ import static org.awaitility.Awaitility.await;
  */
 
 
-public class Search_Test {
+public class Search_Test2 {
 
     @Rule
     public TestWatcher videoWatcher = new TestWatcher() {
@@ -131,12 +115,46 @@ public class Search_Test {
     public VideoRule videoRule = new VideoRule();
 
 
+///////////////////////testcontainers
+    public static BrowserWebDriverContainer firefox =
+            new BrowserWebDriverContainer()
+                    .withDesiredCapabilities(DesiredCapabilities.firefox())
+                    .withRecordingMode(RECORD_ALL, new File("./target/"));
+
+//    @BeforeClass
+//    public static void setUp(){
+//        firefox.start();
+//        RemoteWebDriver driver = firefox.getWebDriver();
+//        WebDriverRunner.setWebDriver(driver);
+//    }
+/////////////////////////////////////////////////////////////////////////////
+
+
     @Before
 
     public void before() {
         /////Настройки записи видео:
+        firefox.start();
+        RemoteWebDriver driver = firefox.getWebDriver();
+        WebDriverRunner.setWebDriver(driver);
+
 
         //System.setProperty("jenkins_url", "/video");
+        URL hubUrl = null;
+        try {
+            hubUrl = new URL("http://localhost:4444/wd/hub");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("-----------------------------");
+        System.out.println(firefox.getContainerIpAddress());
+        System.out.println("-----------------------------");
+
+
+
+
+
 
 
         VideoRecorder.conf().videoEnabled(true)                       // Disabled video globally
@@ -162,7 +180,7 @@ public class Search_Test {
         public void open_page() {
 
             open("http://Google.com");
-            sleep(3000);
+            sleep(30000);
 
             search_box.shouldBe(value("10"));
 

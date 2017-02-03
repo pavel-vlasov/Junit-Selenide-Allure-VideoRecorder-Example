@@ -1,0 +1,80 @@
+{
+  "uid" : "305142df161da5dd",
+  "name" : "open_page",
+  "title" : "Open page",
+  "time" : {
+    "start" : 1486130486218,
+    "stop" : 1486130522787,
+    "duration" : 36569
+  },
+  "summary" : {
+    "attachments" : 2,
+    "steps" : 1
+  },
+  "failure" : {
+    "message" : "ElementShould: Element should be value '10' {By.xpath: //input[@aria-label='Найти']}\nElement: '<input aria-autocomplete=\"both\" aria-haspopup=\"false\" aria-label=\"Найти\" autocomplete=\"off\" class=\"gsfi lst-d-f\" dir=\"ltr\" id=\"lst-ib\" maxlength=\"2048\" name=\"q\" role=\"combobox\" spellcheck=\"false\" title=\"Поиск\" type=\"text\"></input>'",
+    "stackTrace" : "Element should be value '10' {By.xpath: //input[@aria-label='Найти']}\nElement: '<input aria-autocomplete=\"both\" aria-haspopup=\"false\" aria-label=\"Найти\" autocomplete=\"off\" class=\"gsfi lst-d-f\" dir=\"ltr\" id=\"lst-ib\" maxlength=\"2048\" name=\"q\" role=\"combobox\" spellcheck=\"false\" title=\"Поиск\" type=\"text\"></input>'\nScreenshot: ${BUILD_URL}artifact/build/reports/tests/1486130510783.0.png\nTimeout: 4 s.\n\tat com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:66)\n\tat com.codeborne.selenide.commands.Should.should(Should.java:35)\n\tat com.codeborne.selenide.commands.Should.execute(Should.java:29)\n\tat com.codeborne.selenide.commands.Should.execute(Should.java:12)\n\tat com.codeborne.selenide.commands.Commands.execute(Commands.java:140)\n\tat com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:86)\n\tat com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:62)\n\tat com.sun.proxy.$Proxy13.shouldBe(Unknown Source)\n\tat auth.Search_Test.open_page(Search_Test.java:167)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\n\tat org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)\n\tat org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)\n\tat org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)\n\tat org.junit.rules.RunRules.evaluate(RunRules.java:20)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)\n\tat org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)\n"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "8c172eff75ebfbea",
+    "name" : "auth.Search_Test",
+    "title" : "Search test"
+  },
+  "steps" : [ {
+    "name" : "open_page",
+    "title" : "Открыть гугл",
+    "time" : {
+      "start" : 1486130486871,
+      "stop" : 1486130511194,
+      "duration" : 24323
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "FAILED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "scr",
+    "source" : "1a855316-9b5a-44bd-adcf-abc4f351d7ac-attachment",
+    "type" : "img/png",
+    "size" : 29068,
+    "uid" : "326cf20b11c28717"
+  }, {
+    "title" : "video",
+    "source" : "f432f496-0c50-480f-af1c-e4c3e9ca29f4-attachment.mp4",
+    "type" : "video/mp4",
+    "size" : 693191,
+    "uid" : "6997157a27f2557"
+  } ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "JUnit"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "suite-name",
+    "value" : "auth.Search_Test"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-TMO4R7V"
+  }, {
+    "name" : "story",
+    "value" : "Поиск Google"
+  }, {
+    "name" : "thread",
+    "value" : "3992@DESKTOP-TMO4R7V.main(1)"
+  } ],
+  "parameters" : [ ]
+}

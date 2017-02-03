@@ -1,0 +1,38 @@
+{
+  "time" : {
+    "start" : 1486130486218,
+    "stop" : 1486130522787,
+    "duration" : 36569
+  },
+  "testSuites" : [ {
+    "uid" : "8c172eff75ebfbea",
+    "name" : "auth.Search_Test",
+    "title" : "Search test",
+    "time" : {
+      "start" : 1486130486218,
+      "stop" : 1486130522787,
+      "duration" : 36569
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 0,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 1,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "305142df161da5dd",
+      "name" : "open_page",
+      "title" : "Open page",
+      "time" : {
+        "start" : 1486130486218,
+        "stop" : 1486130522787,
+        "duration" : 36569
+      },
+      "severity" : "NORMAL",
+      "status" : "FAILED"
+    } ]
+  } ]
+}

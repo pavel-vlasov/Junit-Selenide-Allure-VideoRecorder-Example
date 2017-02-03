@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: auth.Search_Test
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 37.025 sec <<< FAILURE! - in auth.Search_Test
+open_page(auth.Search_Test)  Time elapsed: 36.845 sec  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should be value '10' {By.xpath: //input[@aria-label='Найти']}
+Element: '<input aria-autocomplete="both" aria-haspopup="false" aria-label="Найти" autocomplete="off" class="gsfi lst-d-f" dir="ltr" id="lst-ib" maxlength="2048" name="q" role="combobox" spellcheck="false" title="Поиск" type="text"></input>'
+	at auth.Search_Test.open_page(Search_Test.java:167)
+
