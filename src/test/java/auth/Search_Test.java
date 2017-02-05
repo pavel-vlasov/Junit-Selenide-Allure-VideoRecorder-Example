@@ -52,11 +52,14 @@ import static auth.Index.*;
 
 import org.junit.Test;
 import ru.yandex.qatools.allure.annotations.*;
+import ru.yandex.qatools.allure.model.SeverityLevel;
+import ru.yandex.qatools.commons.model.Environment;
 //import ru.yandex.qatools.allure.annotations.Attachment;
 
 import static junit.framework.Assert.assertTrue;
 import static org.awaitility.Awaitility.await;
-
+import static auth.ScreenShotOnEveryTest.*;
+import static auth.SubStepAllure.*;
 
 
 /**
@@ -65,6 +68,8 @@ import static org.awaitility.Awaitility.await;
 
 
 public class Search_Test {
+    @Rule
+    public ScreenShooter makeScreenshotOnFailure = ScreenShooter.failedTests().succeededTests();
 
     @Rule
     public TestWatcher videoWatcher = new TestWatcher() {
@@ -111,6 +116,11 @@ public class Search_Test {
                 attachment();
             }
 
+            protected void succeeded(Description description) {
+                super.succeeded(description);
+                attachment();
+        }
+
         @Attachment(value = "scr", type = "img/png")
             private byte[] attachment() {
                 try {
@@ -138,60 +148,67 @@ public class Search_Test {
 
         //System.setProperty("jenkins_url", "/video");
 
-
         VideoRecorder.conf().videoEnabled(true)                       // Disabled video globally
                 .withVideoSaveMode(VideoSaveMode.FAILED_ONLY)     // Save videos for passed and failed tests
                 .withRecorderType(RecorderType.FFMPEG)   // Monte is Default recorder
                 .withRecordMode(RecordingMode.ANNOTATED);
 
 
-
         ///////Настройка заспуска в браузере Chrome
         //           System.setProperty("webdriver.chrome.driver", "C:/Users/vlas2/AppData/Local/Google/Chrome/application/chromedriver.exe");
         //           Configuration.browser = "chrome";
-        //clearBrowserCache();
+        clearBrowserCache();
     }
-
-
-
+@Features("google RU")
 @Stories("Поиск Google")
+    //Environment"gfdgd";
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     @Video
+    @Title("Тест поиска в гугле текста \"Hello\"")
+    public void test1(){
+    open_page();
+    search_box_test();
+    search_box();
+    pictures();
+}
 
     @Step("Открыть гугл")
-        public void open_page() {
+        private void open_page() {
+
 
             open("http://Google.com");
-            sleep(3000);
-
-            search_box.shouldBe(value("10"));
+            //search_box.shouldBe(value("10"));
+            screenShotOnEveryTest();
 
         }
 
     @Step("{0} Вписать в поле поиска текст \"Hello\" ")
-        public void search_box_test() {
+        private void search_box_test() {
 
 
             search_box.sendKeys("Hello");
         }
 
-    @Step("Перейи в меню картинки")
-        public void search_box() {
+    @Step("Нажать поиск и проверить видимость рез-ов")
+        private void search_box() {
             search.click();
             //$(byText("Результатов: примерно 1 320 000 000 (1,08 сек.)")).shouldBe(visible);
+            screenShotOnEveryTest();
+
+        log("Проверка что результаты видны");
             $(byXpath("//div[@id='resultStats']")).shouldBe(visible);
+
         }
 
     @Step("Перейти в меню картинки")
-        public void pictures(){
+        private void pictures(){
             $(By.linkText("Картинки")).click();
             sleep(3000);
         }
 
-
-    @After
-    public void after() {
-        close();
-    }
 }
+
+
+
 

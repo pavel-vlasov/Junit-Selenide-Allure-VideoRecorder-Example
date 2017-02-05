@@ -6,6 +6,7 @@ import com.automation.remarks.video.enums.RecorderType;
 import com.automation.remarks.video.enums.RecordingMode;
 import com.automation.remarks.video.enums.VideoSaveMode;
 import com.automation.remarks.video.recorder.VideoRecorder;
+
 import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.After;
@@ -37,7 +38,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 import static org.awaitility.Awaitility.await;
-import static org.testcontainers.containers.BrowserWebDriverContainer.VncRecordingMode.RECORD_ALL;
+import static org.testcontainers.containers.BrowserWebDriverContainer.VncRecordingMode.*;
 
 //import com.automation.remarks.video.junit.VideoRule;
 //import ru.yandex.qatools.allure.annotations.Attachment;
@@ -149,18 +150,24 @@ public class Search_Test2 {
 
         System.out.println("-----------------------------");
         System.out.println(firefox.getContainerIpAddress());
+        System.out.println(firefox.getSeleniumAddress());
+        System.out.println(firefox.getPort());
+        System.out.println(firefox.getContainerId());
+        System.out.println(firefox.getWebDriver());
+        System.out.println(firefox.getLinkedContainers());
+        System.out.println(firefox.getContainerInfo());
+        System.out.println(firefox.getVncAddress());
         System.out.println("-----------------------------");
-
-
-
-
+        String nodeip = firefox.getVncAddress().split("\\@")[1];
+        System.out.println(nodeip);
 
 
 
         VideoRecorder.conf().videoEnabled(true)                       // Disabled video globally
                 .withVideoSaveMode(VideoSaveMode.FAILED_ONLY)     // Save videos for passed and failed tests
                 .withRecorderType(RecorderType.FFMPEG)   // Monte is Default recorder
-                .withRecordMode(RecordingMode.ANNOTATED);
+                .withRecordMode(RecordingMode.ANNOTATED)
+                .withRemoteUrl(nodeip + "/grid/admin/HubVideoDownloadServlet/?sessionId=" + "");
 
 
 

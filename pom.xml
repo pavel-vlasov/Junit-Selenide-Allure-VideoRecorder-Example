@@ -52,6 +52,11 @@
             <artifactId>selenium</artifactId>
             <version>1.1.8</version>
         </dependency>
+        <dependency>
+            <groupId>com.automation-remarks</groupId>
+            <artifactId>video-recorder-remote</artifactId>
+            <version>1.4</version>
+        </dependency>
     </dependencies>
 
     <properties>
